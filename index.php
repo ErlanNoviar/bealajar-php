@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>Belajar PHP | Dashboard</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet"
@@ -136,12 +136,28 @@
             </li>
             <!-- my-product -->
             <li class="nav-item menu-open">
-              <a href="pages/dataproduct.php" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="nav-icon 	fas fa-shopping-cart"></i>
                 <p>
                   Product
+                  <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/productvariabel.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Product Variabel</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/productarray.php" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Product Array</p>
+                  </a>
+                </li>
+
+              </ul>
             </li>
             <!-- Akhir my-product -->
             <!-- Login-layout -->
@@ -155,6 +171,7 @@
             </li>
             <!-- Akhir Login-layout -->
             <!-- /.sidebar-menu -->
+          </ul>
       </div>
       <!-- /.sidebar -->
     </aside>

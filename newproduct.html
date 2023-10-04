@@ -27,7 +27,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="../index.php" class="nav-link">Home</a>
+                    <a href="../index3.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Contact</a>
@@ -75,7 +75,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="../index.php" class="brand-link">
+            <a href="../index.html" class="brand-link">
                 <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                     style="opacity: .8">
                 <span class="brand-text font-weight-light">Welcome</span>
@@ -106,43 +106,42 @@
                     </div>
                 </div>
 
-                <!-- Sidebar Menu -->
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                        data-accordion="false">
-                        <li class="nav-item menu-open">
-                            <a href="../index.php" class="nav-link">
-                                <i class="nav-icon fas fa-home"></i>
-                                <p>
-                                    Dashboard
-                                    <!-- <i class="right fas fa-angle-left"></i> -->
-                                </p>
-                            </a>
-                        </li>
-                        <!-- my-product -->
-                        <li class="nav-item menu-open">
-                            <a href="newproduct.php" class="nav-link active">
-                                <i class="nav-icon 	fas fa-shopping-cart"></i>
-                                <p>
-                                    Product
-                                </p>
-                            </a>
-                        </li>
-                        <!-- Akhir my-product -->
-                        <!-- Login-layout -->
-                        <li class="nav-item menu-open">
-                            <a href="login-layout.php" class="nav-link">
-                                <i class="nav-icon fas fa-sign-in-alt"></i>
-                                <p>
-                                    Login
-                                </p>
-                            </a>
-                        </li>
-                        <!-- Akhir Login-layout -->
-                        <!-- /.sidebar-menu -->
-            </div>
-            <!-- /.sidebar -->
-        </aside>
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <li class="nav-item menu-open">
+                <a href="../index.html" class="nav-link">
+                  <i class="nav-icon fas fa-home"></i>
+                  <p>
+                    Dashboard
+                    <!-- <i class="right fas fa-angle-left"></i> -->
+                  </p>
+                </a>
+              </li>
+              <!-- my-product -->
+              <li class="nav-item menu-open">
+                <a href="newproduct.html" class="nav-link active">
+                  <i class="nav-icon 	fas fa-shopping-cart"></i>
+                  <p>
+                    Product
+                  </p>
+                </a>
+              </li>
+              <!-- Akhir my-product -->
+              <!-- Login-layout -->
+              <li class="nav-item menu-open">
+                <a href="login-layout.html" class="nav-link">
+                  <i class="nav-icon fas fa-sign-in-alt"></i>
+                  <p>
+                    Login
+                  </p>
+                </a>
+              </li>
+              <!-- Akhir Login-layout -->
+              <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
@@ -174,48 +173,82 @@
                                 <!-- product -->
                                 <div class="card-body">
                                     <div class="card-deck">
-                                        <?php
-                                        // include data dari listing_product.php
-                                        require 'listing_product.php';
-
-                                        // looping untuk menampilkan product
-                                        foreach ($ListProduct1 as $item) {
-                                        ?>
                                         <div class="card">
-                                            <img src="<?php echo $item['image']; ?>" class="card-img-top" alt="...">
+                                            <img src="../dist/img/Product/Hoodie.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title"><?php echo $item['title']; ?></h5>
-                                                <p class="card-text"><?php echo $item['description']; ?></p>
-                                                <p><?php echo $item['prince']; ?></p>
+                                                <h5 class="card-title">Jaket Zipper Pria</h5>
+                                                <p class="card-text">Jaket Pantai Motif Blue Sea Onesize</p>
+                                                <p>Rp. 52.000</p>
                                                 <a href="#" class="btn btn-primary">BUY</a>
                                             </div>
                                         </div>
-                                        <?php
-                                        }
-                                        ?>
+                                        <div class="card">
+                                            <img src="../dist/img/Product/J.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Jaket Parasut</h5>
+                                                <p class="card-text">Bahan Despo, ukuran M, L & XL</p>
+                                                <p>Rp. 66.900</p>
+                                                <a href="#" class="btn btn-primary">BUY</a>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <img src="../dist/img/Product/Baseball.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Jaket Pria Tebal Baseball</h5>
+                                                <p class="card-text">ukuran M, L & XL</p>
+                                                <p>Rp. 70.000</p>
+                                                <a href="#" class="btn btn-primary">BUY</a>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <img src="../dist/img/Product/jenas.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Jaket Pria Model Jeans</h5>
+                                                <p class="card-text">ukuran M, L & XL</p>
+                                                <p>Rp. 119.000</p>
+                                                <a href="#" class="btn btn-primary">BUY</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                <div class="card-deck">
-                                        <?php
-                                        // include data dari listing_product.php
-                                        require 'listing_product.php';
-
-                                        // looping untuk menampilkan product
-                                        foreach ($ListProduct2 as $item) {
-                                        ?>
+                                    <div class="card-deck">
                                         <div class="card">
-                                            <img src="<?php echo $item['img']; ?>" class="card-img-top" alt="...">
+                                            <img src="../dist/img/Product/sepatu.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title"><?php echo $item['title']; ?></h5>
-                                                <p class="card-text"><?php echo $item['description']; ?></p>
-                                                <p><?php echo $item['prince']; ?></p>
+                                                <h5 class="card-title">SEPATU SANTAI PRIA ARDIVO </h5>
+                                                <p class="card-text">SNEAKERS - KASUAL TERBARU 2023</p>
+                                                <p>Rp. 80.000</p>
                                                 <a href="#" class="btn btn-primary">BUY</a>
                                             </div>
                                         </div>
-                                        <?php
-                                        }
-                                        ?>
+                                        <div class="card">
+                                            <img src="../dist/img/Product/S.Putih.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Sepatu Pria Running</h5>
+                                                <p class="card-text">Sneakers Model Terbaru 2021</p>
+                                                <p>Rp. 120.000</p>
+                                                <a href="#" class="btn btn-primary">BUY</a>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <img src="../dist/img/Product/PARAYU.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Parayu Sepatu Sneakers Kets Pria</h5>
+                                                <p class="card-text"> Hight Elve Sport</p>
+                                                <p>Rp. 150.000</p>
+                                                <a href="#" class="btn btn-primary">BUY</a>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <img src="../dist/img/Product/Converse.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Converse 70s Ox Black White gret Premium Quality</h5>
+                                                <p class="card-text"> Made In Vietnam</p>
+                                                <p>Rp. 160.000</p>
+                                                <a href="#" class="btn btn-primary">BUY</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- akhir Product -->
