@@ -27,7 +27,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="../index.php" class="nav-link">Home</a>
+                    <a href="dashboard.php" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Contact</a>
@@ -75,7 +75,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="../index.php" class="brand-link">
+            <a href="dashboard.php" class="brand-link">
                 <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                     style="opacity: .8">
                 <span class="brand-text font-weight-light">Welcome</span>
@@ -111,7 +111,7 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <li class="nav-item menu-open">
-                            <a href="../index.php" class="nav-link">
+                            <a href="dashboard.php" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Dashboard
@@ -147,14 +147,24 @@
                         <!-- Akhir my-product -->
                         <!-- Login-layout -->
                         <li class="nav-item menu-open">
-                            <a href="login-layout.php" class="nav-link">
-                                <i class="nav-icon fas fa-sign-in-alt"></i>
+                            <a href="layout_Register_Login.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-spa"></i>
                                 <p>
-                                    Login
+                                    Desain
                                 </p>
                             </a>
                         </li>
                         <!-- Akhir Login-layout -->
+                        <!-- Logout-layout -->
+                        <li class="nav-item menu-open">
+                            <a href="../index.php" class="nav-link">
+                                <i class="nav-icon fas fa-sign-out-alt"></i>
+                                <p>
+                                    Log-out
+                                </p>
+                            </a>
+                        </li>
+                        <!-- Akhir Logout -->
                         <!-- /.sidebar-menu -->
                     </ul>
             </div>
