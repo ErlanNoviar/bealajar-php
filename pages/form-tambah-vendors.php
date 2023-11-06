@@ -48,10 +48,10 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="../dist/img/avatar6.jpg" class="img-circle elevation-2" alt="User Image">
+                        <img src="../dist/img/avatar6.png" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Putri Deylin</a>
+                        <a href="#" class="d-block">Erlan Noviar</a>
                     </div>
                 </div>
 
@@ -73,7 +73,7 @@
                         data-accordion="false">
                          <!-- Dashboard -->
                         <li class="nav-item">
-                            <a href="../dashboard.php" class="nav-link active">
+                            <a href="../dashboard.php" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -83,7 +83,7 @@
                         <!-- /.Dashboard -->
                         <!-- Product Variabel -->
                         <li class="nav-item">
-                        <a href="produk-variabel.php" class="nav-link active">
+                        <a href="produk-variabel.php" class="nav-link">
                             <i class="nav-icon 	fas fa-shopping-cart"></i>
                             <p>
                                 Product Variabel
@@ -93,7 +93,7 @@
                         <!-- /.Product Variabel -->
                         <!-- Product Loop -->
                         <li class="nav-item">
-                            <a href="produk-loop.php" class="nav-link active">
+                            <a href="produk-loop.php" class="nav-link">
                                 <i class="nav-icon 	fas fa-shopping-cart"></i>
                                 <p>
                                     Product Loop
@@ -103,7 +103,7 @@
                         <!-- /.Product Loop -->
                         <!-- CRUD Product -->
                         <li class="nav-item">
-                        <a href="pos-shop.php" class="nav-link active">
+                        <a href="pos-shop.php" class="nav-link">
                             <i class="nav-icon 	fas fa-shopping-cart"></i>
                             <p>
                             CRUD Products
@@ -113,7 +113,7 @@
                         <!-- /.CRUD Product -->
                          <!-- Pelanggan -->
                         <li class="nav-item">
-                        <a href="pelanggan.php" class="nav-link active">
+                        <a href="pelanggan.php" class="nav-link">
                             <i class="nav-icon 	fas fa-users"></i>
                             <p>
                             Customers
@@ -133,7 +133,7 @@
                         <!-- /.Vendors -->
                         <!-- Logout -->
                         <li class="nav-item">
-                            <a href="login-redirect.php" class="nav-link active">
+                            <a href="logout.php" class="nav-link">
                                 <i class="nav-icon 	fas fa-sign-out-alt"></i>
                                 <p>
                                     Logout

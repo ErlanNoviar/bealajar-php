@@ -48,10 +48,10 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="../dist/img/avatar6.jpg" class="img-circle elevation-2" alt="User Image">
+                        <img src="../dist/img/avatar6.png" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Putri Deylin</a>
+                        <a href="#" class="d-block">Erlan Noviar</a>
                     </div>
                 </div>
 
@@ -71,9 +71,9 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
-                         <!-- Dashboard -->
+                        <!-- Dashboard -->
                         <li class="nav-item">
-                            <a href="../dashboard.php" class="nav-link active">
+                            <a href="../dashboard.php" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -83,18 +83,18 @@
                         <!-- /.Dashboard -->
                         <!-- Product Variabel -->
                         <li class="nav-item">
-                        <a href="produk-variabel.php" class="nav-link active">
-                            <i class="nav-icon 	fas fa-shopping-cart"></i>
-                            <p>
-                                Product Variabel
-                            </p>
-                        </a>
+                            <a href="produk-variabel.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-shopping-cart"></i>
+                                <p>
+                                    Product Variabel
+                                </p>
+                            </a>
                         </li>
                         <!-- /.Product Variabel -->
                         <!-- Product Loop -->
                         <li class="nav-item">
-                            <a href="produk-loop.php" class="nav-link active">
-                                <i class="nav-icon 	fas fa-shopping-cart"></i>
+                            <a href="produk-loop.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-shopping-bag"></i>
                                 <p>
                                     Product Loop
                                 </p>
@@ -103,37 +103,37 @@
                         <!-- /.Product Loop -->
                         <!-- CRUD Product -->
                         <li class="nav-item">
-                        <a href="pos-shop.php" class="nav-link active">
-                            <i class="nav-icon 	fas fa-shopping-cart"></i>
-                            <p>
-                            CRUD Products
-                            </p>
-                        </a>
+                            <a href="pos-shop.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-shopping-basket"></i>
+                                <p>
+                                    CRUD Products
+                                </p>
+                            </a>
                         </li>
                         <!-- /.CRUD Product -->
                         <!-- Pelanggan -->
                         <li class="nav-item">
-                        <a href="pelanggan.php" class="nav-link active">
-                            <i class="nav-icon 	fas fa-users"></i>
-                            <p>
-                            Customers
-                            </p>
-                        </a>
+                            <a href="pelanggan.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-users"></i>
+                                <p>
+                                    Customers
+                                </p>
+                            </a>
                         </li>
                         <!-- /.Pelanggan -->
                         <!-- Vendors -->
                         <li class="nav-item">
-                         <a href="vendors.php" class="nav-link active">
-                            <i class="nav-icon 	fas fa-chart-pie"></i>
-                            <p>
-                            Vendors
-                            </p>
-                        </a>
+                            <a href="vendors.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-chart-pie"></i>
+                                <p>
+                                    Vendors
+                                </p>
+                            </a>
                         </li>
                         <!-- /.Vendors -->
                         <!-- Logout -->
                         <li class="nav-item">
-                            <a href="login-redirect.php" class="nav-link active">
+                            <a href="logout.php" class="nav-link">
                                 <i class="nav-icon 	fas fa-sign-out-alt"></i>
                                 <p>
                                     Logout
@@ -162,64 +162,68 @@
                     </div>
                 </div><!-- /.container-fluid -->
             </section>
-<section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <!-- left column -->
-          <div class="col-md-6">
-            <!-- general form elements -->
-            <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Tambah Data</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-                    <form action="proses-tambah.php" method="post" enctype="multipart/form-data">
-                        <div class="card-body">
-                            <div class="form-group">
-                            <label for="product_name">Product Name:</label>
-                            <input type="text" id="product_name" name="product_name" class="form-control" required>
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Tambah Data</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <form action="proses-tambah.php" method="post" enctype="multipart/form-data">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="product_name">Product Name:</label>
+                                            <input type="text" id="product_name" name="product_name"
+                                                class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="category_id">Category:</label>
+                                            <select id="category_id" name="category_id" class="form-control" required>
+                                                <option value="" selected>Select</option>
+                                                <option value="1">Sports</option>
+                                                <option value="2">Daily</option>
+                                                <option value="3">Accessories</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="product_code">Product Code:</label>
+                                            <input type="text" id="product_code" name="product_code"
+                                                class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="description">Description:</label>
+                                            <input type="text" id="description" name="description" class="form-control"
+                                                required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="price">Price:</label>
+                                            <input type="text" id="price" name="price" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="stock">Stock:</label>
+                                            <input type="text" id="stock" name="stock" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="image">Upload Image:</label>
+                                            <input type="file" id="image" name="image[]" class="form-control"
+                                                accept=".jpg, .jpeg, .png, .gif" multiple required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Tambah Data</button>
+                                </form>
+                                <!-- /.card -->
                             </div>
-                            <div class="form-group">
-                                <label for="category_id">Category:</label>
-                                <select id="category_id" name="category_id" class="form-control" required>
-                                    <option value="" selected>Select</option>
-                                    <option value="1">Sports</option>
-                                    <option value="2">Daily</option>
-                                    <option value="3">Accessories</option>
-                            </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="product_code">Product Code:</label>
-                                <input type="text" id="product_code" name="product_code" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="description">Description:</label>
-                                <input type="text" id="description" name="description" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="price">Price:</label>
-                                <input type="text" id="price" name="price" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="stock">Stock:</label>
-                                <input type="text" id="stock" name="stock" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="image">Upload Image:</label>
-                                <input type="file" id="image" name="image[]" class="form-control" accept=".jpg, .jpeg, .png, .gif" multiple required>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Tambah Data</button>
-                        </form>
-               <!-- /.card -->
-            </div>
-          <!--/.col (right) -->
+                            <!--/.col (right) -->
+                        </div>
+                        <!-- /.row -->
+                    </div><!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
         </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
             <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>

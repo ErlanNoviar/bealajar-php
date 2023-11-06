@@ -81,10 +81,10 @@ if (isset($_GET['id'])) {
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="../dist/img/avatar6.jpg" class="img-circle elevation-2" alt="User Image">
+                        <img src="../dist/img/avatar6.png" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Putri Deylin</a>
+                        <a href="#" class="d-block">Erlan Noviar</a>
                     </div>
                 </div>
 
@@ -104,9 +104,9 @@ if (isset($_GET['id'])) {
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
-                         <!-- Dashboard -->
+                        <!-- Dashboard -->
                         <li class="nav-item">
-                            <a href="../dashboard.php" class="nav-link active">
+                            <a href="../dashboard.php" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -116,18 +116,18 @@ if (isset($_GET['id'])) {
                         <!-- /.Dashboard -->
                         <!-- Product Variabel -->
                         <li class="nav-item">
-                        <a href="produk-variabel.php" class="nav-link active">
-                            <i class="nav-icon 	fas fa-shopping-cart"></i>
-                            <p>
-                                Product Variabel
-                            </p>
-                        </a>
+                            <a href="produk-variabel.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-shopping-cart"></i>
+                                <p>
+                                    Product Variabel
+                                </p>
+                            </a>
                         </li>
                         <!-- /.Product Variabel -->
                         <!-- Product Loop -->
                         <li class="nav-item">
-                            <a href="produk-loop.php" class="nav-link active">
-                                <i class="nav-icon 	fas fa-shopping-cart"></i>
+                            <a href="produk-loop.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-shopping-bag"></i>
                                 <p>
                                     Product Loop
                                 </p>
@@ -136,37 +136,37 @@ if (isset($_GET['id'])) {
                         <!-- /.Product Loop -->
                         <!-- CRUD Product -->
                         <li class="nav-item">
-                        <a href="pos-shop.php" class="nav-link active">
-                            <i class="nav-icon 	fas fa-shopping-cart"></i>
-                            <p>
-                            CRUD Products
-                            </p>
-                        </a>
+                            <a href="pos-shop.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-shopping-basket"></i>
+                                <p>
+                                    CRUD Products
+                                </p>
+                            </a>
                         </li>
                         <!-- /.CRUD Product -->
                         <!-- Pelanggan -->
                         <li class="nav-item">
-                        <a href="pelanggan.php" class="nav-link active">
-                            <i class="nav-icon 	fas fa-users"></i>
-                            <p>
-                            Customers
-                            </p>
-                        </a>
+                            <a href="pelanggan.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-users"></i>
+                                <p>
+                                    Customers
+                                </p>
+                            </a>
                         </li>
                         <!-- /.Pelanggan -->
                         <!-- Vendors -->
                         <li class="nav-item">
-                         <a href="vendors.php" class="nav-link active">
-                            <i class="nav-icon 	fas fa-chart-pie"></i>
-                            <p>
-                            Vendors
-                            </p>
-                        </a>
+                            <a href="vendors.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-chart-pie"></i>
+                                <p>
+                                    Vendors
+                                </p>
+                            </a>
                         </li>
                         <!-- /.Vendors -->
                         <!-- Logout -->
                         <li class="nav-item">
-                            <a href="login-redirect.php" class="nav-link active">
+                            <a href="logout.php" class="nav-link">
                                 <i class="nav-icon 	fas fa-sign-out-alt"></i>
                                 <p>
                                     Logout
@@ -177,93 +177,106 @@ if (isset($_GET['id'])) {
                         <!-- /.sidebar-menu -->
             </div>
         </aside>
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1>Form Edit Data</h1>
-                    </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Product</li>
-                        </ol>
-                    </div>
-                </div>
-            </div><!-- /.container-fluid -->
-        </section>
-        <section class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- left column -->
-                    <div class="col-md-6">
-                        <!-- general form elements -->
-                        <div class="card card-primary">
-                            <div class="card-header">
-                                <h3 class="card-title">Edit Data</h3>
-                            </div>
-                            <!-- /.card-header -->
-                            <!-- form start -->
-                            <div class="card-body">
-                            <form action="proses-edit.php" method="post" enctype="multipart/form-data">
-                            <input type="hidden" id="product_id" name="product_id" class="form-control" value="<?php echo $product_id; ?>">
-                                <div class="form-group">
-                                    <label for="product_name">Product Name:</label>
-                                    <input type="text" id="product_name" name="product_name" class="form-control" value="<?php echo $product_name; ?>" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="category_id">Category:</label>
-                                    <select id="category_id" name="category_id" class="form-control" required>
-                                        <option value="1" <?php if ($category_id == 1) echo 'selected'; ?>>Sports</option>
-                                        <option value="2" <?php if ($category_id == 2) echo 'selected'; ?>>Daily</option>
-                                        <option value="3" <?php if ($category_id == 3) echo 'selected'; ?>>Accessories</option>
-                                </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="product_code">Product Code:</label>
-                                    <input type="text" id="product_code" name="product_code" class="form-control" value="<?php echo $product_code; ?>" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="description">Description:</label>
-                                    <input type="text" id="description" name="description" class="form-control" value="<?php echo $description; ?>" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="price">Price:</label>
-                                    <input type="text" id="price" name="price" class="form-control" value="<?php echo $price; ?>" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="stock">Stock:</label>
-                                    <input type="text" id="stock" name="stock" class="form-control" value="<?php echo $stock; ?>" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="image">Update Image:</label>
-                                    <input type="file" id="image" name="image[]" class="form-control" accept=".jpg, .jpeg, .png, .gif" multiple required><br>
-                                    <div style="display: flex;">
-                                    <?php
-                                    $imagesArray = json_decode($image, true);
-                                    if (!empty($imagesArray)) {
-                                        foreach ($imagesArray as $img) {
-                                            echo '<img src="../dist/upload/' . $img . '" alt="image" width="100" height="100" style="margin-right: 10px;"><br>';
-                                        }
-                                    }
-                                    ?>
-                                    </div>
-                                </div>
-                                    <button type="submit" class="btn btn-primary">Update Data</button>
-                                </div>
-                            </form>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Form Edit Data</h1>
                         </div>
-                        <!-- /.card -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Product</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Edit Data</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <div class="card-body">
+                                    <form action="proses-edit.php" method="post" enctype="multipart/form-data">
+                                        <input type="hidden" id="product_id" name="product_id" class="form-control"
+                                            value="<?php echo $product_id; ?>">
+                                        <div class="form-group">
+                                            <label for="product_name">Product Name:</label>
+                                            <input type="text" id="product_name" name="product_name"
+                                                class="form-control" value="<?php echo $product_name; ?>" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="category_id">Category:</label>
+                                            <select id="category_id" name="category_id" class="form-control" required>
+                                                <option value="1" <?php if ($category_id == 1)
+                                                    echo 'selected'; ?>>Sports
+                                                </option>
+                                                <option value="2" <?php if ($category_id == 2)
+                                                    echo 'selected'; ?>>Daily
+                                                </option>
+                                                <option value="3" <?php if ($category_id == 3)
+                                                    echo 'selected'; ?>>
+                                                    Accessories</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="product_code">Product Code:</label>
+                                            <input type="text" id="product_code" name="product_code"
+                                                class="form-control" value="<?php echo $product_code; ?>" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="description">Description:</label>
+                                            <input type="text" id="description" name="description" class="form-control"
+                                                value="<?php echo $description; ?>" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="price">Price:</label>
+                                            <input type="text" id="price" name="price" class="form-control"
+                                                value="<?php echo $price; ?>" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="stock">Stock:</label>
+                                            <input type="text" id="stock" name="stock" class="form-control"
+                                                value="<?php echo $stock; ?>" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="image">Update Image:</label>
+                                            <input type="file" id="image" name="image[]" class="form-control"
+                                                accept=".jpg, .jpeg, .png, .gif" multiple required><br>
+                                            <div style="display: flex;">
+                                                <?php
+                                                $imagesArray = json_decode($image, true);
+                                                if (!empty($imagesArray)) {
+                                                    foreach ($imagesArray as $img) {
+                                                        echo '<img src="../dist/upload/' . $img . '" alt="image" width="100" height="100" style="margin-right: 10px;"><br>';
+                                                    }
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Update Data</button>
+                                </div>
+                                </form>
+                            </div>
+                            <!-- /.card -->
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
-     <!-- /.content-wrapper -->
-     <footer class="main-footer">
+            </section>
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
             <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">

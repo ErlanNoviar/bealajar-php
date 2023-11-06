@@ -78,10 +78,10 @@ if (isset($_GET['id'])) {
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="../dist/img/avatar6.jpg" class="img-circle elevation-2" alt="User Image">
+                        <img src="../dist/img/avatar6.png" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Putri Deylin</a>
+                        <a href="#" class="d-block">Erlan Noviar</a>
                     </div>
                 </div>
 
@@ -101,9 +101,9 @@ if (isset($_GET['id'])) {
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
-                         <!-- Dashboard -->
+                        <!-- Dashboard -->
                         <li class="nav-item">
-                            <a href="../dashboard.php" class="nav-link active">
+                            <a href="../dashboard.php" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -113,18 +113,18 @@ if (isset($_GET['id'])) {
                         <!-- /.Dashboard -->
                         <!-- Product Variabel -->
                         <li class="nav-item">
-                        <a href="produk-variabel.php" class="nav-link active">
-                            <i class="nav-icon 	fas fa-shopping-cart"></i>
-                            <p>
-                                Product Variabel
-                            </p>
-                        </a>
+                            <a href="produk-variabel.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-shopping-cart"></i>
+                                <p>
+                                    Product Variabel
+                                </p>
+                            </a>
                         </li>
                         <!-- /.Product Variabel -->
                         <!-- Product Loop -->
                         <li class="nav-item">
-                            <a href="produk-loop.php" class="nav-link active">
-                                <i class="nav-icon 	fas fa-shopping-cart"></i>
+                            <a href="produk-loop.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-shopping-bag"></i>
                                 <p>
                                     Product Loop
                                 </p>
@@ -133,37 +133,37 @@ if (isset($_GET['id'])) {
                         <!-- /.Product Loop -->
                         <!-- CRUD Product -->
                         <li class="nav-item">
-                        <a href="pos-shop.php" class="nav-link active">
-                            <i class="nav-icon 	fas fa-shopping-cart"></i>
-                            <p>
-                            CRUD Products
-                            </p>
-                        </a>
+                            <a href="pos-shop.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-shopping-basket"></i>
+                                <p>
+                                    CRUD Products
+                                </p>
+                            </a>
                         </li>
                         <!-- /.CRUD Product -->
                         <!-- Pelanggan -->
                         <li class="nav-item">
-                        <a href="pelanggan.php" class="nav-link active">
-                            <i class="nav-icon 	fas fa-users"></i>
-                            <p>
-                            Customers
-                            </p>
-                        </a>
+                            <a href="pelanggan.php" class="nav-link">
+                                <i class="nav-icon 	fas fa-users"></i>
+                                <p>
+                                    Customers
+                                </p>
+                            </a>
                         </li>
                         <!-- /.Pelanggan -->
-                         <!-- Vendors -->
-                         <li class="nav-item">
-                         <a href="vendors.php" class="nav-link active">
-                            <i class="nav-icon 	fas fa-chart-pie"></i>
-                            <p>
-                            Vendors
-                            </p>
-                        </a>
+                        <!-- Vendors -->
+                        <li class="nav-item">
+                            <a href="vendors.php" class="nav-link active">
+                                <i class="nav-icon 	fas fa-chart-pie"></i>
+                                <p>
+                                    Vendors
+                                </p>
+                            </a>
                         </li>
                         <!-- /.Vendors -->
                         <!-- Logout -->
                         <li class="nav-item">
-                            <a href="login-redirect.php" class="nav-link active">
+                            <a href="logout.php" class="nav-link">
                                 <i class="nav-icon 	fas fa-sign-out-alt"></i>
                                 <p>
                                     Logout
@@ -174,71 +174,77 @@ if (isset($_GET['id'])) {
                         <!-- /.sidebar-menu -->
             </div>
         </aside>
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1>Form Edit Data</h1>
-                    </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Product</li>
-                        </ol>
-                    </div>
-                </div>
-            </div><!-- /.container-fluid -->
-        </section>
-        <section class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- left column -->
-                    <div class="col-md-6">
-                        <!-- general form elements -->
-                        <div class="card card-primary">
-                            <div class="card-header">
-                                <h3 class="card-title">Edit Data</h3>
-                            </div>
-                            <!-- /.card-header -->
-                            <!-- form start -->
-                            <div class="card-body">
-                            <form action="proses-edit-vendors.php" method="post">
-                            <input type="hidden" id="vendors_id" name="vendors_id" class="form-control" value="<?php echo $vendors_id; ?>">
-                                <div class="form-group">
-                                    <label for="code">Code:</label>
-                                    <input type="text" id="code" name="code" class="form-control" value="<?php echo $code; ?>" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="name">Name:</label>
-                                    <input type="text" id="name" name="name" class="form-control" value="<?php echo $name; ?>" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone_number">Phone Number:</label>
-                                    <input type="text" id="phone_number" name="phone_number" class="form-control" value="<?php echo $phone_number; ?>" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email:</label>
-                                    <input type="text" id="email" name="email" class="form-control" value="<?php echo $email; ?>" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="address">Address:</label>
-                                    <input type="text" id="address" name="address" class="form-control" value="<?php echo $address; ?>" required>
-                                </div>
-                                    <button type="submit" class="btn btn-primary">Update Data</button>
-                                </div>
-                            </form>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Form Edit Data</h1>
                         </div>
-                        <!-- /.card -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Product</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Edit Data</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <div class="card-body">
+                                    <form action="proses-edit-vendors.php" method="post">
+                                        <input type="hidden" id="vendors_id" name="vendors_id" class="form-control"
+                                            value="<?php echo $vendors_id; ?>">
+                                        <div class="form-group">
+                                            <label for="code">Code:</label>
+                                            <input type="text" id="code" name="code" class="form-control"
+                                                value="<?php echo $code; ?>" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">Name:</label>
+                                            <input type="text" id="name" name="name" class="form-control"
+                                                value="<?php echo $name; ?>" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone_number">Phone Number:</label>
+                                            <input type="text" id="phone_number" name="phone_number"
+                                                class="form-control" value="<?php echo $phone_number; ?>" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email:</label>
+                                            <input type="text" id="email" name="email" class="form-control"
+                                                value="<?php echo $email; ?>" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address">Address:</label>
+                                            <input type="text" id="address" name="address" class="form-control"
+                                                value="<?php echo $address; ?>" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Update Data</button>
+                                </div>
+                                </form>
+                            </div>
+                            <!-- /.card -->
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
-     <!-- /.content-wrapper -->
-     <footer class="main-footer">
+            </section>
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
             <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">

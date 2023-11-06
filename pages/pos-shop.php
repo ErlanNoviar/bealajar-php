@@ -458,7 +458,7 @@ if (isset($_POST['search_button'])) {
                         <img src="../dist/img/avatar6.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Putri Deylin</a>
+                        <a href="#" class="d-block">Erlan Noviar</a>
                     </div>
                 </div>
 

@@ -22,7 +22,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="../dashboard.html"><b>Putri</b>Shop</a>
+            <a href="../dashboard.html"><b>Login</b>Member</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
