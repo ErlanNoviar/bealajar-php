@@ -1,24 +1,23 @@
 <?php
-include 'koneksi.php';
-
 session_start();
-if (!$_SESSION['berhasil']) {
-  header("location: ../index.php");
-  die();
+
+if (!isset($_SESSION['username'])) {
+   
+    header("Location: ../index.php");
+    exit();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Belajar PHP | Dashboard</title>
+  <title>AdminLTE 3 | Dashboard</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet"
-    href="../https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&dispFlay=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -54,58 +53,30 @@ if (!$_SESSION['berhasil']) {
         <li class="nav-item">
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
-        <li class="nav-item d-none d-sm-inline-block">
-          <a href="dashboard.php" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-          <a href="#" class="nav-link">Contact</a>
-        </li>
-      </ul>
 
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
-        <!-- Navbar Search -->
-        <li class="nav-item">
-          <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-            <i class="fas fa-search"></i>
-          </a>
-          <div class="navbar-search-block">
-            <form class="form-inline">
-              <div class="input-group input-group-sm">
-                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                  <button class="btn btn-navbar" type="submit">
-                    <i class="fas fa-search"></i>
-                  </button>
-                  <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-            <i class="fas fa-expand-arrows-alt"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-            <i class="fas fa-th-large"></i>
-          </a>
-        </li>
-      </ul>
+      <!-- Tanggal Waktu -->
+        <a id="waktu" class="nav-link" data-widget="navbar" href="#" role="button"><?= $hasil_konversi; ?></a>
+        <?php
+          function konversiTanggalWaktu() {
+              date_default_timezone_set('Asia/Jakarta'); 
+              $hasil = date('l, j F Y H:i:s');
+              return $hasil;
+          }
+          $hasil_konversi = konversiTanggalWaktu();
+      ?>
+      </p>
     </nav>
-    <!-- /.navbar -->
+    <!-- /.Tanggal Waktu -->
 
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="dashboard.php" class="brand-link">
+      <a href="#" class="brand-link">
         <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
           style="opacity: .8">
-        <span class="brand-text font-weight-light">Welcome</span>
+        <span class="brand-text font-weight-light">AdminLTE</span>
       </a>
 
       <!-- Sidebar -->
@@ -113,7 +84,7 @@ if (!$_SESSION['berhasil']) {
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="../dist/img/logo.png" class="img-circle elevation-2" alt="User Image">
+            <img src="../dist/img/avatar6.png" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
             <a href="#" class="d-block">Erlan Noviar</a>
@@ -135,67 +106,78 @@ if (!$_SESSION['berhasil']) {
         <!-- Sidebar Menu -->
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <li class="nav-item menu-open">
+            <!-- Dashboard -->
+            <li class="nav-item">
               <a href="dashboard.php" class="nav-link active">
-                <i class="nav-icon fas fa-home"></i>
+                <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
-                  <!-- <i class="right fas fa-angle-left"></i> -->
                 </p>
               </a>
             </li>
-            <!-- my-product -->
-            <li class="nav-item menu-open">
-              <a href="#" class="nav-link">
+            <!-- /.Dashboard -->
+            <!-- Product Variabel -->
+            <li class="nav-item">
+              <a href="produk-variabel.php" class="nav-link">
                 <i class="nav-icon 	fas fa-shopping-cart"></i>
                 <p>
-                  Product
-                  <i class="right fas fa-angle-left"></i>
+                  Product Variabel
                 </p>
               </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="productvariabel.php" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Product Variabel</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="productarray.php" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Product Array</p>
-                  </a>
-                </li>
-
-              </ul>
             </li>
-            <!-- Akhir my-product -->
-            <!-- Login-layout -->
-            <li class="nav-item menu-open">
-              <a href="layout_Register_Login.php" class="nav-link">
-                <i class="nav-icon 	fas fa-spa"></i>
+            <!-- /.Product Variabel -->
+             <!-- Product Loop -->
+             <li class="nav-item">
+              <a href="produk-loop.php" class="nav-link">
+                <i class="nav-icon 	fas fa-shopping-bag"></i>
                 <p>
-                  Desain
+                  Product Loop
                 </p>
               </a>
             </li>
-            <!-- Akhir Login-layout -->
-
-            <!-- Logout-layout -->
-            <li class="nav-item menu-open">
+            <!-- /.Product Loop -->
+            <!-- CRUD Product -->
+            <li class="nav-item">
+              <a href="pos-shop.php" class="nav-link">
+                <i class="nav-icon 	fas fa-shopping-basket"></i>
+                <p>
+                  CRUD Products
+                </p>
+              </a>
+            </li>
+            <!-- /.CRUD Product -->
+            <!-- Pelanggan -->
+            <li class="nav-item">
+              <a href="pelanggan.php" class="nav-link">
+                <i class="nav-icon 	fas fa-users"></i>
+                <p>
+                  Customers
+                </p>
+              </a>
+            </li>
+            <!-- /.Pelanggan -->
+            <!-- Vendors -->
+            <li class="nav-item">
+              <a href="vendors.php" class="nav-link">
+                <i class="nav-icon 	fas fa-chart-pie"></i>
+                <p>
+                  Vendors
+                </p>
+              </a>
+            </li>
+            <!-- /.Vendors -->
+             <!-- Logout -->
+             <li class="nav-item">
               <a href="logout.php" class="nav-link">
-                <i class="nav-icon fas fa-sign-out-alt"></i>
+                <i class="nav-icon 	fas fa-sign-out-alt"></i>
                 <p>
-                  Log-out
+                  Logout
                 </p>
               </a>
             </li>
-            <!-- Akhir Logout -->
-          </ul>
-        </nav>
-      <!-- /.sidebar-menu -->
+            <!-- /.Logout -->
+            <!-- /.sidebar-menu -->
       </div>
-      <!-- /.sidebar -->
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
@@ -219,102 +201,108 @@ if (!$_SESSION['berhasil']) {
       <!-- /.content-header -->
 
       <!-- Main content -->
+      <?php
+      $conn = mysqli_connect("localhost", "root", "", "pos_shop");
+
+          // Koneksi 
+          if (!$conn) {
+              die("Connection failed: " . mysqli_connect_error());
+          }
+
+          // Query select data
+          $query = "SELECT * FROM dashboard_data";
+          $result = mysqli_query($conn, $query);
+
+          $product_count = $customer_count = $vendor_count = 0; 
+
+          if ($result) {
+              $data = mysqli_fetch_assoc($result);
+              $product_count = $data['product_count'];
+              $customer_count = $data['customer_count'];
+              $vendor_count = $data['vendor_count'];
+          } else {
+            echo "Data tidak ditemukan.";
+          }
+
+          // Tutup koneksi
+          mysqli_close($conn);
+          ?>
+          
       <section class="content">
-        <div class="container-fluid">
-          <!-- Small boxes (Stat box) -->
-          <div class="row">
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-info">
-                <div class="inner">
-                  <h3>150</h3>
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-4 col-9">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3><?php echo $product_count; ?></h3>
 
-                  <p>New Orders</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-bag"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <p>Products</p>
               </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-success">
-                <div class="inner">
-                  <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                  <p>Bounce Rate</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-stats-bars"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
               </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-warning">
-                <div class="inner">
-                  <h3>44</h3>
-
-                  <p>User Registrations</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-person-add"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-danger">
-                <div class="inner">
-                  <h3>65</h3>
-
-                  <p>Unique Visitors</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-pie-graph"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
           </div>
-          <!-- /.row -->
-          <!-- Main row -->
-          <div class="row">
-            <!-- Left col -->
-            <section class="col-lg-7 connectedSortable">
-            </section>
-            <!-- /.Left col -->
-            <!-- right col (We are only adding the ID to make the widgets sortable)-->
-            <section class="col-lg-5 connectedSortable">
+          <!-- ./col -->
+          <div class="col-lg-4 col-9">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3><?php echo $customer_count; ?></h3>
 
-            </section>
-            <!-- right col -->
+                <p>Customers</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
           </div>
-          <!-- /.row (main row) -->
-        </div><!-- /.container-fluid -->
+          <!-- ./col -->
+          <div class="col-lg-4 col-9">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3><?php echo $vendor_count; ?></h3>
+
+                <p>Vendors</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+
+          <!-- <div class="bodymain">
+            <img src="../dist/img/welcome.jpg" class="img-fluid" alt="bg">
+          </div> -->
       </section>
-      <!-- /.content -->
+      <!-- right col -->
     </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-      <strong>Copyright &copy; 2023 <a href="https://github.com/ErlanNoviar">Erlan Noviar</a>.</strong>
-      <div class="float-right d-none d-sm-inline-block">
-        SIB - PT. Arkatama Multi Solusindo
-      </div>
-    </footer>
+    <!-- /.row (main row) -->
+  </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.2.0
+    </div>
+  </footer>
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
   </div>
   <!-- ./wrapper -->
 
@@ -348,10 +336,31 @@ if (!$_SESSION['berhasil']) {
   <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
   <script src="../dist/js/adminlte.js"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="../dist/js/demo.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="../dist/js/pages/dashboard.js"></script>
+  <!-- Script Tanggal Waktu -->
+  <script type="text/javascript">
+            function perbaruiWaktu() {
+                const waktuElemen = document.getElementById('waktu');
+                const sekarang = new Date();
+                const hari = sekarang.toLocaleString('id-ID', { weekday: 'long' });
+                const tanggal = sekarang.getDate();
+                const bulan = sekarang.toLocaleString('id-ID', { month: 'long' });
+                const tahun = sekarang.getFullYear();
+                const jam = sekarang.getHours();
+                const menit = sekarang.getMinutes();
+                const detik = sekarang.getSeconds();
+                
+                const hasil = `${hari}, ${tanggal} ${bulan} ${tahun} ${jam}:${menit}:${detik}`;
+                waktuElemen.textContent = hasil;
+            }
+
+            // Perbarui waktu setiap detik
+            setInterval(perbaruiWaktu, 1000);
+
+            // Pemanggilan pertama
+            perbaruiWaktu();
+        </script>
 </body>
 
 </html>

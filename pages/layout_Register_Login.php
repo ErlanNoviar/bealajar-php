@@ -125,7 +125,7 @@
                         <!-- my-product -->
                         <li class="nav-item menu-open">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon 	fas fa-shopping-cart"></i>
+                                <i class="nav-icon 	fas fa-shopping-basket"></i>
                                 <p>
                                     Product
                                     <i class="right fas fa-angle-left"></i>
@@ -148,6 +148,19 @@
                             </ul>
                         </li>
                         <!-- Akhir my-product -->
+
+                        <!-- Product POS -->
+                        <li class="nav-item menu-open">
+                            <a href="product_pos.php" class="nav-link">
+                                <i class="nav-icon fas fa-shopping-cart"></i>
+                                <p>
+                                    Product POS
+                                    <!-- <i class="right fas fa-angle-left"></i> -->
+                                </p>
+                            </a>
+                        </li>
+                        <!-- Akhir Product POS -->
+
                         <!-- Login-layout -->
                         <li class="nav-item menu-open">
                             <a href="layout_Register_Login.php" class="nav-link">

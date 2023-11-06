@@ -1,7 +1,3 @@
-<?php
-require 'function.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,21 +15,23 @@ require 'function.php';
   <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/loginredirect.css">
 </head>
 
 <body class="hold-transition register-page">
   <div class="register-box">
     <div class="register-logo">
-      <a href="#"><b>Admin</b>LTE</a>
+      <a href="#"><b>Register</b> Membership</a>
     </div>
 
     <div class="card">
       <div class="card-body register-card-body">
         <p class="login-box-msg">Register a new membership</p>
 
-        <form action="function.php" method="post">
+        <form action="proses-register.php" method="post">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="name" placeholder="Full name" autocomplete="off">
+            <input type="text" name="name" class="form-control" placeholder="Name">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-user"></span>
@@ -41,7 +39,7 @@ require 'function.php';
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="email" class="form-control" name="email" placeholder="Email">
+            <input type="email" name="email" class="form-control" placeholder="Email">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-envelope"></span>
@@ -49,30 +47,37 @@ require 'function.php';
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="phone_number" placeholder="Phone Number">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="	fas fa-phone-square-alt"></span>
-              </div>
-            </div>
-          </div>
-          <div class="input-group mb-3">
-            <input type="password" class="form-control" name="password" placeholder="Password">
+            <input type="tel" name="phone_number" class="form-control" placeholder="No Hp">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
               </div>
             </div>
           </div>
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" placeholder="Password" name="password" id="passwordField">
+            <div class="input-group-append">
+              <span class="input-group-text" id="showPasswordIcon">
+                <i class="fa fa-eye" id="eyeIcon"></i>
+              </span>
+            </div>
+          </div>
           <div class="row">
+            <div class="col-8">
+              <div class="icheck-primary">
+                <input type="checkbox" id="agreeTerms" name="terms" value="agree">
+                <label for="agreeTerms">
+                  I agree to the <a href="#">terms</a>
+                </label>
+              </div>
+            </div>
             <!-- /.col -->
             <div class="col-4">
-              <button type="submit" name="register" class="btn btn-primary btn-block">Register !!</button>
+              <button type="submit" class="btn btn-primary btn-block">Register</button>
             </div>
             <!-- /.col -->
           </div>
         </form>
-
         <a href="../index.php" class="text-center">I already have a membership</a>
       </div>
       <!-- /.form-box -->
@@ -81,11 +86,13 @@ require 'function.php';
   <!-- /.register-box -->
 
   <!-- jQuery -->
-  <script src="../../plugins/jquery/jquery.min.js"></script>
+  <script src="../plugins/jquery/jquery.min.js"></script>
   <!-- Bootstrap 4 -->
-  <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
-  <script src="../../dist/js/adminlte.min.js"></script>
+  <script src="../dist/js/adminlte.min.js"></script>
+  <!-- Password -->
+  <script src="../dist/js/pass.js"></script>
 </body>
 
 </html>
